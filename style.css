@@ -1,78 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
 :root {
-  --white: hsl(0, 0%, 100%);
-  --light-gray: hsl(212, 45%, 89%);
-  --grayish-blue: hsl(220, 15%, 55%);
-  --dark-blue: hsl(218, 44%, 22%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
 
-  --fw-regular: 400;
-  --fw-bold: 700;
+    --fw-regular: 400;
+    --fw-bold: 700;
 
-  --font-family: 'Outfit', sans-serif;
+    --font-base: 'Outfit', sans-serif;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: var(--light-gray);
-  font-family: var(--font-family);
-  font-weight: var(--fw-regular);
-  line-height: 1.5;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-base);
+    font-weight: var(--fw-regular);
 }
 
-img {
-  width: 100%;
-  max-width: 280px;
-  display: block;
-  border-radius: 15px;
+.card {
+    width: 320px;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.container {
-  width: 80%;
-  max-width: 250px;
-  margin: 0 auto;
-  border-radius: 25px;
-  background-color: var(--white);
-  padding: 1.5325rem;
+.card > img {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.title {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    color: var(--dark-blue);
 }
 
-h1 {
-  margin: 0;
-  padding: 1rem 0;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: var(--fw-bold);
-  color: var(--dark-blue);
-}
-
-p {
-  margin: 0;
-  font-size: 0.75321rem;
-  text-align: center;
-  color: var(--grayish-blue);
-}
-
-@media (max-width: 315px) {
-  h1 {
-    font-size: 0.7rem;
-  }
-
-  p {
-    font-size: 0.5rem;
-  }
+.card > p {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    color: var(--grayish-blue);
 }
