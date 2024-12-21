@@ -34,7 +34,7 @@ body {
 .qr-container {
   overflow: hidden;
   border-radius: 10px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .qr-code {
